@@ -17,12 +17,11 @@ li {
   list-style: none;
 }
 
-<<<<<<< HEAD
 body {
   font-family: "Poppins", sans-serif;
 }
 
-=======
+
 /* ************************************** */
 
 .Top-bar{
@@ -223,7 +222,6 @@ color: #c00b25;
 }
 /* ************************************************************************** */
 
->>>>>>> 2f1e812f4c9efd94b5ba4f233eeb471f44845dca
 .destination {
   text-align: center;
 }
@@ -300,7 +298,6 @@ color: #c00b25;
 .services {
   padding: 100px 0;
 }
-<<<<<<< HEAD
 .services .ser {
   display: flex;
   align-items: center;
@@ -342,12 +339,10 @@ color: #c00b25;
 .container {
   max-width: 1192px !important;
 }
-=======
 
 
 
 
->>>>>>> 2f1e812f4c9efd94b5ba4f233eeb471f44845dca
 
 @media (min-width: 1200px) {
   .container {
