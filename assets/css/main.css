@@ -17,6 +17,11 @@ li {
   list-style: none;
 }
 
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+
 /* ************************************** */
 
 .Top-bar{
@@ -247,7 +252,7 @@ color: #c00b25;
 }
 .destination p {
   font-size: 17px;
-  font-weight: 400;
+  font-weight: 500;
   color: #777777;
   line-height: 1.7;
 }
@@ -288,6 +293,47 @@ color: #c00b25;
 .destination .destination_images .dest_img:hover img {
   opacity: 0.82;
   filter: brightness(100%) contrast(120%) saturate(110%) blur(0px) hue-rotate(0deg);
+}
+
+.services {
+  padding: 100px 0;
+}
+.services .ser {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+.services .ser .ser_img {
+  transform: translate3d(0px, 0px, 0px);
+  transition: transform 0.5s ease;
+  width: 50%;
+}
+.services .ser .ser_txt {
+  width: 50%;
+  transform: translate3d(0px, 0px, 0px);
+  transition: transform 0.5s ease;
+}
+.services .ser .ser_txt h2 {
+  font-size: 45px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.services .ser .ser_txt p {
+  font-size: 17px;
+  color: #777777;
+  margin: 20px 0;
+}
+.services .ser .ser_txt a {
+  color: #fff;
+  background-color: rgb(227, 3, 46);
+  padding: 5px 20px;
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: 600;
+  border-radius: 5px;
+  min-height: 42px;
+  display: inline-block;
+  line-height: 42px;
 }
 
 .container {
