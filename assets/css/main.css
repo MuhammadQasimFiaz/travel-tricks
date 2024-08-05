@@ -17,6 +17,47 @@ li {
 
 /* ************************************** */
 
+.Top-bar{
+  align-items: center;
+  background-color: black ;
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px; 
+  padding: 10px 25px 10px 25px;   
+}
+.Top-bar .Top-first{
+  display: flex;
+  justify-content: space-between;
+}
+.Top-bar .Top-first .Top-first-left{
+  display: flex;
+ 
+  gap: 15px;
+  
+}
+.Top-bar .Top-first .Top-first-left span{
+  font-size: 14px;
+  font-weight: 650;
+}
+.Top-bar .Top-first .Top-first-left li {
+  position: relative;
+  border-right: 1px solid white;
+}
+.Top-bar .Top-first .Top-first-left li i{
+  padding-right: 7px;
+  color: #c00b25;
+  
+}
+
+
+
+.Top-bar .Top-first .Top-first-left li a:hover i {
+  color: white;
+}
+
+.Top-bar .Top-first .Top-first-left li a:hover span {
+  color: #c00b25;
+}
 
 
 
@@ -25,6 +66,68 @@ li {
 
 
 
+.Top-bar .Top-first .Top-first-left a{
+  color: white;
+  padding-right: 8px;
+
+
+  
+}
+
+.Top-bar .Top-first .Top-first-right    {
+  display: flex;
+  gap: 5px;
+
+}
+.Top-bar .Top-first .Top-first-right a{
+background: #c00b25;
+    padding: 3px 5px 3px 5px;
+    color: white;
+    font-size: 12px;
+}
+
+.Top-bar .Top-first .Top-first-right a:hover{
+  background-color: #970518 !important;
+  color: rgb(240, 240, 240);
+}
+
+
+
+
+.container-fluid{
+  border-bottom: 1px solid black;
+}
+.header{
+  z-index: 2;
+  background-color: white;
+}
+.header-content{
+  height: 90px;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+}
+.header-left{
+  width: 20%;
+}
+.header-right li{
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.header-right{
+  display: flex;
+  width: 80%;
+ justify-content: center;
+  font-weight: 500;
+  font-size: 15px;
+  align-items: center;
+}
+.header-right > li{
+  position: relative;
+}
+.header-right li a{
+  color: black;
+}
 @media (min-width: 1200px) {
   .container {
     max-width: 1170px;
