@@ -1,3 +1,35 @@
+//fixed header
+document.addEventListener('DOMContentLoaded', () => {
+    window.onscroll = function () { myFunction() };
+
+const dropdown = document.querySelector(".dropdown")
+var header = document.getElementById("myHeader");
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.scrollY > sticky) {
+      header.classList.add("sticky");
+      dropdown.style.top = '15%'
+  } else {
+      header.classList.remove("sticky");
+      dropdown.style.top = '22%'
+  }
+}
+});
+
+const currentPage = window.location.pathname;
+const menuLinks = document.querySelectorAll('#menu li a');
+console.log(currentPage)
+menuLinks.forEach(link => {
+    if (link.getAttribute('href').includes(currentPage)) {
+      link.classList.add('active');
+    }
+  });
+
+
+
+
+
 document.addEventListener('DOMContentLoaded', () => {
   const destinationImages = document.querySelector('.destination_images');
   const destImgs = document.querySelectorAll('.dest_img');
