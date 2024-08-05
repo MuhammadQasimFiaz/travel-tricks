@@ -298,15 +298,38 @@ color: #c00b25;
 .services {
   padding: 100px 0;
 }
+.services .container-fluid {
+  padding: 0 25px;
+}
 .services .ser {
   display: flex;
   align-items: center;
   gap: 50px;
+  margin-bottom: 70px;
 }
 .services .ser .ser_img {
   transform: translate3d(0px, 0px, 0px);
   transition: transform 0.5s ease;
+  position: relative;
   width: 50%;
+}
+.services .ser .ser_img .img_back1 {
+  position: absolute;
+  background-color: #f7f7f7;
+  width: 90%;
+  height: 116%;
+  left: -15px;
+  top: -8%;
+  z-index: -9;
+}
+.services .ser .ser_img .img_back2 {
+  position: absolute;
+  background-color: #f7f7f7;
+  width: 90%;
+  height: 116%;
+  right: -15px;
+  top: -8%;
+  z-index: -9;
 }
 .services .ser .ser_txt {
   width: 50%;
@@ -339,10 +362,6 @@ color: #c00b25;
 .container {
   max-width: 1192px !important;
 }
-
-
-
-
 
 @media (min-width: 1200px) {
   .container {

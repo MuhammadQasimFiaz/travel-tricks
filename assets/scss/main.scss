@@ -87,14 +87,37 @@ body {
 
 .services {
     padding: 100px 0;
+    .container-fluid {
+        padding: 0 25px;
+    }
     .ser {
         display: flex;
         align-items: center;
         gap: 50px;
+        margin-bottom: 70px;
         .ser_img {
             transform: translate3d(0px, 0px, 0px);
             transition: transform 0.5s ease;
+            position: relative;
             width: 50%;
+            .img_back1 {
+                position: absolute;
+                background-color: #f7f7f7;
+                width: 90%;
+                height: 116%;
+                left: -15px;
+                top: -8%;
+                z-index: -9;
+            }
+            .img_back2 {
+                position: absolute;
+                background-color: #f7f7f7;
+                width: 90%;
+                height: 116%;
+                right: -15px;
+                top: -8%;
+                z-index: -9;
+            }
         }
         .ser_txt {
             width: 50%;
