@@ -17,6 +17,8 @@ function myFunction() {
 }
 });
 
+//current page color
+
 const currentPage = window.location.pathname;
 const menuLinks = document.querySelectorAll('#menu li a');
 console.log(currentPage)
