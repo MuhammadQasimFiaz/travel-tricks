@@ -332,6 +332,7 @@ color: #c00b25;
   z-index: -9;
 }
 .services .ser .ser_txt {
+  margin-left: 30px;
   width: 50%;
   transform: translate3d(0px, 0px, 0px);
   transition: transform 0.5s ease;
