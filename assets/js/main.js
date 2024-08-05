@@ -97,20 +97,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const handleMouseEnter = () => {
       isMouseInside = true;
-      updateTransform(); // Ensure transform is updated when mouse enters
+      // Removed the call to updateTransform() here to prevent transformation on mouse enter
   };
 
   const handleMouseLeave = () => {
       isMouseInside = false;
-      updateTransform(); // Ensure transform is updated when mouse leaves
+      updateTransform(); // Ensure transform is reset when mouse leaves
   };
   
   // Add event listeners
-  window.addEventListener('scroll', updateTransform);
+  window.addEventListener('scroll', () => {
+      if (isMouseInside) { // Only update transform when the mouse is inside and the user scrolls
+          updateTransform();
+      }
+  });
   window.addEventListener('resize', updateTransform); // Optional: to handle window resizing
   servicesSection.addEventListener('mouseenter', handleMouseEnter);
   servicesSection.addEventListener('mouseleave', handleMouseLeave);
 
   updateTransform(); // Initial call
 });
+
 
