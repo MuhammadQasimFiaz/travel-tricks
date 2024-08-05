@@ -22,3 +22,61 @@ document.addEventListener('DOMContentLoaded', () => {
       });
   });
 });
+
+// 
+
+document.addEventListener('DOMContentLoaded', () => {
+  const servicesSection = document.querySelector('.services');
+  const serElements = document.querySelectorAll('.services .ser');
+  
+  let isMouseInside = false; // Flag to track if mouse is inside the section
+  
+  const updateTransform = () => {
+      if (isMouseInside) {
+          const rect = servicesSection.getBoundingClientRect();
+          const windowHeight = window.innerHeight;
+          
+          // Calculate the percentage of the section's visibility
+          const percentageInView = Math.max(0, Math.min(1, (windowHeight - rect.top) / (windowHeight + rect.height)));
+          
+          serElements.forEach(ser => {
+              const serImg = ser.querySelector('.ser_img');
+              const serTxt = ser.querySelector('.ser_txt');
+
+              // Calculate the transform values based on scroll
+              const translateYImg = percentageInView * -30; // Interpolate between 0px and -30px
+              const translateYTxt = percentageInView * 20;  // Interpolate between 0px and 20px
+              
+              serImg.style.transform = `translate3d(0px, ${translateYImg}px, 0px)`;
+              serTxt.style.transform = `translate3d(0px, ${translateYTxt}px, 0px)`;
+          });
+      } else {
+          serElements.forEach(ser => {
+              const serImg = ser.querySelector('.ser_img');
+              const serTxt = ser.querySelector('.ser_txt');
+
+              serImg.style.transform = `translate3d(0px, 0px, 0px)`;
+              serTxt.style.transform = `translate3d(0px, 0px, 0px)`;
+          });
+      }
+  };
+
+  const handleMouseEnter = () => {
+      isMouseInside = true;
+      updateTransform(); // Ensure transform is updated when mouse enters
+  };
+
+  const handleMouseLeave = () => {
+      isMouseInside = false;
+      updateTransform(); // Ensure transform is updated when mouse leaves
+  };
+  
+  // Add event listeners
+  window.addEventListener('scroll', updateTransform);
+  window.addEventListener('resize', updateTransform); // Optional: to handle window resizing
+  servicesSection.addEventListener('mouseenter', handleMouseEnter);
+  servicesSection.addEventListener('mouseleave', handleMouseLeave);
+
+  updateTransform(); // Initial call
+});
+
