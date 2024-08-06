@@ -223,6 +223,7 @@ color: #c00b25;
 /* ************************************************************************** */
 .blog{
   background-color: #f7f7f7;
+  padding: 5px 0px;
 }
 .blog h3 {
   padding-top: 20px;
@@ -237,7 +238,7 @@ color: #c00b25;
 .blog h3::after {
   content: '';
   background: rgb(277, 3, 46);
-    width: 120px;
+    width: 40px;
     display: inline-block;
     height: 2px;
     position: absolute;
@@ -575,6 +576,52 @@ text-align: center;
 
 /* ************************************************************************** */
 
+.we_offers{
+  padding: 40px 10px;
+}
+.we_offers .offers{
+  display: flex;  
+  text-align: center;
+  gap: 15px;
+}
+.we_offers .offers .offer h5{
+  padding: 15px 0px;
+}
+.we_offers .offers .offer{
+  margin: 40px 0px;
+}
+.we_offers h3{
+  font-size: 34px;
+    font-weight: 500;
+    font-style: normal;
+    text-transform: capitalize;
+    margin: 20px 0;
+    position: relative;
+    text-align: center;
+
+}
+.we_offers h3::after {
+  content: " ";
+  position: absolute;
+  top: 130%;
+  left: calc(50% - 20px);
+  width: 40px;
+  height: 2px;
+  background-color: rgb(227, 3, 46);
+}
+.we_offers p{
+  /* padding: 20px 0px; */
+    font-size: 17px;
+    text-align: center;
+    font-weight: 500;
+    color: #777777;
+    justify-content: center;
+
+}
+
+
+/* ************************************************************************** */
+
 .destination {
   text-align: center;
 }
@@ -649,7 +696,7 @@ text-align: center;
 }
 
 .services {
-  padding: 100px 0;
+  padding-top: 100px;
 }
 .services .container-fluid {
   padding: 0 25px;
