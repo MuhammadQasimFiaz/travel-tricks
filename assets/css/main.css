@@ -261,7 +261,7 @@ color: #c00b25;
 .blog .news-media .news-content{
   background-color: white;
   height: fit-content;
-  padding: 10px;
+  padding: 19px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
  margin-left: -15px;
  z-index: 1;
@@ -308,7 +308,7 @@ color: #c00b25;
   padding: 2px 8px;
   width: fit-content;
   margin: auto;
-  margin-top: -22px;
+  margin-top: -33px;
 }
 .blog .news-media .news-content .news-btn1 a{
   color: white;
@@ -383,7 +383,7 @@ text-align: center;
 .blog .travel .travel-content{
   background-color: white;
     height: fit-content;
-    padding: 10px;
+    padding: 22px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
     margin-right: -15px;
     z-index: 1;
@@ -394,7 +394,7 @@ text-align: center;
   padding: 2px 8px;
   width: fit-content;
   margin: auto;
-  margin-top: -22px;
+  margin-top: -35px;
 }
 .blog .travel .travel-content .travel-btn1 a{
   color: white;
@@ -483,6 +483,96 @@ text-align: center;
   color: black;
   margin-top: -20px;
 }
+
+
+
+
+
+.news-media, .travel {
+  position: relative;
+  overflow: hidden; 
+}
+
+.blog-img, .travel-img {
+  position: relative;
+  overflow: hidden; 
+}
+
+.blog-img img , .travel-img img{
+  width: 100%; 
+  height: auto;
+  transition: transform 0.3s ease; 
+  display: block;
+}
+
+.blog-img::before, .travel-img::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); 
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1; 
+}
+
+.blog-img::after, .travel-img::after {
+  content: '\2022  \2022  \2022';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  color: white;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 2; 
+}
+
+.news-media:hover .blog-img img, .travel:hover .travel-img img {
+  transform: scale(1.1); 
+}
+
+.news-media:hover .blog-img::before, .travel:hover .travel-img::before{
+  opacity: 1;
+}
+
+.news-media:hover .blog-img::after, .travel:hover .travel-img::after {
+  opacity: 1; 
+}
+
+/* Existing .img-overlay class handling */
+.img-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 2em;
+}
+
+.news-media:hover .img-overlay, .travel:hover .img-overlay {
+  opacity: 1;
+}
+
+.dots {
+  display: none;
+}
+
+.news-media:hover .dots, .travel:hover .dots {
+  display: block;
+}
+
+
 /* ************************************************************************** */
 
 .destination {
