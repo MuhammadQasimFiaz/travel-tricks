@@ -659,10 +659,10 @@ text-align: center;
     margin-bottom: 80px;
 
 }
-.carousel-control-prev-icon,
+/* .carousel-control-prev-icon,
 .carousel-control-next-icon {
-  color: black; /* Sets the color of the control icons to black */
-}
+  background-color: black;
+} */
 .carousel-inner{
   width: 60%;
  margin: auto;
@@ -829,16 +829,56 @@ text-align: center;
 
 
 /* *********************************************************************** */
-/* .main-footer{
+.main-footer{
+  background-color: #ededed;
+  padding: 40px 35px;
+} 
+.main-footer .container{
   display: flex;
-}
+gap: 40px;
+
+  flex-direction: row;
+ }
 .main-footer .payment{
-
-  width: 30%;
-
-} */
-
-
+  /* display: flex; */
+  width: 40%;
+  
+}
+.main-footer .payment p{
+  padding: 20px 0px;
+  font-size: 16px;
+}
+.main-footer .payment img{
+  width: 230px;
+}
+.sub-footer{
+  background-color: black;
+  color: #777777;
+  text-align: center;
+  padding: 20px 0px;
+  font-size: 17px;
+}
+.main-footer h5{
+  font-size: 24px;
+  padding-bottom: 15px;
+}
+.main-footer ul li a{
+  color: black;
+  font-size: 16px;
+}
+.main-footer ul li{
+  padding-top: 3px;
+}
+.main-footer i{
+  color: #c00b25;
+  font-size: 14px;
+}
+.main-footer .offices .DU{
+  margin-bottom: 22px;
+}
+.main-footer .offices{
+  margin-left: 25px;
+}
 /* **************************************************************************** */
 
 
