@@ -229,7 +229,7 @@ color: #c00b25;
   padding-top: 20px;
   font-size: 34px;
   text-align: center;
-  font-weight: 500;
+  font-weight: 400;
   font-style: normal;
   text-transform: capitalize;
   margin: 20px 0;
@@ -262,7 +262,7 @@ color: #c00b25;
 .blog .news-media .news-content{
   background-color: white;
   height: fit-content;
-  padding: 19px;
+  padding: 27px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
  margin-left: -15px;
  z-index: 1;
@@ -274,7 +274,7 @@ color: #c00b25;
 }
 .blog .news-media .news-content h3 a{
   color: #c00b25;
- font-weight: 500;
+ font-weight: 400;
   font-size: 23px;
 }
 .blog .news-media .news-content h3 a:hover{
@@ -413,7 +413,7 @@ text-align: center;
 }
 .blog .travel .travel-content h3 a{
   color: #c00b25;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 23px;
 }
 .blog .travel .travel-content h3 a:hover{
@@ -592,7 +592,7 @@ text-align: center;
 }
 .we_offers h3{
   font-size: 34px;
-    font-weight: 500;
+    font-weight: 400;
     font-style: normal;
     text-transform: capitalize;
     margin: 20px 0;
@@ -619,7 +619,74 @@ text-align: center;
 
 }
 
+/* ************************************************************************ */
 
+.reviews{
+  /* background-image: url("assets/images/travel-testimonials-bg.jpg"); */
+  background-position: center top;
+  /* background-color: black; */
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 540px;
+  padding-top: 45px;
+}
+.reviews h3{
+  font-size: 34px;
+    font-weight: 400;
+    font-style: normal;
+    text-transform: capitalize;
+    margin: 30px 0;
+    position: relative;
+    text-align: center;
+
+}
+.reviews h3::after {
+  content: " ";
+  position: absolute;
+  top: 130%;
+  left: calc(50% - 20px);
+  width: 40px;
+  height: 2px;
+  background-color: rgb(227, 3, 46);
+}
+.reviews p{
+  /* padding: 20px 0px; */
+    font-size: 17px;
+    text-align: center;
+    font-weight: 500;
+    color: #777777;
+    justify-content: center;
+    margin-bottom: 80px;
+
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  color: black; /* Sets the color of the control icons to black */
+}
+.carousel-inner{
+  width: 60%;
+ margin: auto;
+}
+.carousel-item h4{
+  text-align: center;
+  justify-content: center;
+}
+.carousel-item{
+  min-width: 200px;
+}
+/* .carousel-item {
+  min-height: 300px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
+
+/* .carousel-caption img {
+  width: 150px; 
+  height: 150px;
+  object-fit: cover; 
+  margin-bottom: 15px; 
+} */
 /* ************************************************************************** */
 
 .destination {
@@ -759,6 +826,22 @@ text-align: center;
   display: inline-block;
   line-height: 42px;
 }
+
+
+/* *********************************************************************** */
+/* .main-footer{
+  display: flex;
+}
+.main-footer .payment{
+
+  width: 30%;
+
+} */
+
+
+/* **************************************************************************** */
+
+
 
 .container {
   max-width: 1192px !important;
