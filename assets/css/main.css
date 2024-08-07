@@ -633,7 +633,7 @@ text-align: center;
 /* ************************************************************************** */
 
 .we_offers{
-  padding: 40px 10px;
+  padding-bottom: 40px;
 }
 .we_offers .offers{
   display: flex;  
@@ -644,7 +644,7 @@ text-align: center;
   padding: 15px 0px;
 }
 .we_offers .offers .offer{
-  margin: 40px 0px;
+  margin-top: 40px;
 }
 .we_offers h3{
   font-size: 34px;
@@ -853,7 +853,7 @@ text-align: center;
 }
 
 .services {
-  padding: 100px 0;
+  padding-top: 100px;
 }
 .services .container-fluid {
   padding: 0 25px;

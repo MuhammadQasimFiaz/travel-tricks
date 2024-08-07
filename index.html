@@ -14,6 +14,7 @@
     <!-- css for owl carousel -->
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/assets/owl.carousel.min.css"> -->
     <!-- css for owl carousel -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/main.css">
 </head>
@@ -159,10 +160,10 @@
 <main>
   <section class="destination">
     <div class="container">
-      <h2>choose your</h2>
-      <h3>perfect destinations</h3>
-      <p>Purchase treasures from the souks in Dubai. Explore the rice fields of Indonesia. Savour a coffee and croissant on the cobbled streets of Italy, or swim in sparkling waters on the beaches of Thailand. Whether its luxury accommodation, exquisite cuisine, natural wonders, historical treasures or peaceful getaways you’re after, we can craft the perfect holiday for you.</p>
-      <div class="destination_images">
+      <h2 class="aos-init aos-animate" data-aos="fade-down">choose your</h2>
+      <h3 class="aos-init aos-animate" data-aos="fade-down">perfect destinations</h3>
+      <p class="aos-init aos-animate" data-aos="fade-down">Purchase treasures from the souks in Dubai. Explore the rice fields of Indonesia. Savour a coffee and croissant on the cobbled streets of Italy, or swim in sparkling waters on the beaches of Thailand. Whether its luxury accommodation, exquisite cuisine, natural wonders, historical treasures or peaceful getaways you’re after, we can craft the perfect holiday for you.</p>
+      <div class="destination_images aos-init aos-animate" data-aos="zoom-in">
         <div class="dest_img">
           <a href="#">
             <img src="assets/images/destination1.jpg" class="img-fluid" alt="">
@@ -229,7 +230,7 @@
       </div>
       <div class="ser flex-row-reverse">
         <div class="ser_img">
-          <img src="assets/images/service2.jpg" class="img-fluid" alt="">
+          <img src="assets/images/service2.jpg" class="img-fluid aos-init aos-animate" alt="" data-aos="flip-right">
           <div class="img_back2"></div>
         </div>
         <div class="ser_txt">
@@ -242,9 +243,9 @@
   </section>
   <section class="we_offers">
     <div class="container">
-      <h3>What We Offer</h3>
-      <p>Discover the World, Create Your Story: Your Journey, Our Expertise.</p>
-      <div class="offers">
+      <h3 class="aos-init aos-animate" data-aos="zoom-in">What We Offer</h3>
+      <p class="aos-init aos-animate" data-aos="zoom-in">Discover the World, Create Your Story: Your Journey, Our Expertise.</p>
+      <div class="offers aos-init aos-animate" data-aos="fade-up">
         <div class="offer">
           <img src="assets/images/Icon-1.png" alt="">
           <h5>Tickets booking</h5>
@@ -545,6 +546,7 @@
 <!-- /////////////////////////////////////////////////////////// -->
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <!-- Include jQuery -->
 
 <!-- <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script> -->
@@ -552,6 +554,9 @@
 <!-- <script src="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/owl.carousel.min.js"></script> -->
 <!-- js for owl carousel -->
 <script src="assets/js/main.js"></script>
+<script>
+  AOS.init();
+</script>
 
 
 </body>
