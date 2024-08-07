@@ -54,7 +54,7 @@ body {
 }
 .Top-bar .Top-first .Top-first-left li i{
   padding-right: 7px;
-  color: #c00b25;
+  color: rgb(227, 3, 46);
   
 }
 
@@ -65,7 +65,7 @@ body {
 }
 
 .Top-bar .Top-first .Top-first-left li a:hover span {
-  color: #c00b25;
+  color: rgb(227, 3, 46);
 }
 .Top-bar .Top-first .Top-first-left a{
   color: white;
@@ -81,7 +81,7 @@ body {
 
 }
 .Top-bar .Top-first .Top-first-right a{
-background: #c00b25;
+background: rgb(227, 3, 46);
     padding: 3px 5px 3px 5px;
     color: white;
     font-size: 12px;
@@ -128,10 +128,10 @@ background: #c00b25;
   font-size: 15px;
 }
 .header-right li a:hover{
-  color: #c00b25;
+  color: rgb(227, 3, 46);
 }
 #menu li a.active{
-color: #c00b25;
+color: rgb(227, 3, 46);
 }
 .header-right li{
   position: relative;
@@ -184,8 +184,11 @@ color: #c00b25;
   
 }
 .cards .img-p{
- 
    margin-right: 15px;
+}
+.cards .img-p:hover img {
+  opacity: 0.82;
+  filter: brightness(100%) contrast(120%) saturate(110%) blur(0px) hue-rotate(0deg);
 }
 .cards .img-p p{
   font-size: 14px;
@@ -221,9 +224,62 @@ color: #c00b25;
 
 }
 /* ************************************************************************** */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  to {
+    opacity: 1;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.carousel-caption {
+  opacity: 0;
+  animation: slideUp 1s ease-in-out forwards;
+  width: 48%;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.carousel-item.active .carousel-caption {
+  opacity: 1;
+  
+}
+
+.my-carousel .carousel-item .carousel-caption h4 {
+  font-family: "Satisfy", cursive;
+  font-size: 24px;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+.my-carousel .carousel-item .carousel-caption h5 {
+  font-size: 60px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: 20px 0;
+}
+.my-carousel .carousel-item .carousel-caption a {
+  background-color: rgb(192, 11, 37);
+  font-size: 17px;
+  font-weight: 500;
+  padding: 10px 25px;
+  border-radius: 5px;
+  text-transform: capitalize;
+  color: #ffffff;
+  border: 1px solid rgb(192, 11, 37);
+  transition: .3s;
+}
+.my-carousel .carousel-item .carousel-caption a:hover {
+  border-color: #ffffff;
+  background-color: transparent;
+}
+/* ************************************************************************** */
 .blog{
   background-color: #f7f7f7;
-  padding: 5px 0px;
+  margin-bottom: 60px;
 }
 .blog h3 {
   padding-top: 20px;
@@ -273,7 +329,7 @@ color: #c00b25;
   margin-top: -18px;
 }
 .blog .news-media .news-content h3 a{
-  color: #c00b25;
+  color: rgb(227, 3, 46);
  font-weight: 400;
   font-size: 23px;
 }
@@ -412,7 +468,7 @@ text-align: center;
 
 }
 .blog .travel .travel-content h3 a{
-  color: #c00b25;
+  color: rgb(227, 3, 46);
     font-weight: 400;
     font-size: 23px;
 }
@@ -627,8 +683,8 @@ text-align: center;
   /* background-color: black; */
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 540px;
-  padding-top: 45px;
+  /* min-height: 540px; */
+  padding-bottom: 45px;
 }
 .reviews h3{
   font-size: 34px;
@@ -656,16 +712,49 @@ text-align: center;
     font-weight: 500;
     color: #777777;
     justify-content: center;
-    margin-bottom: 80px;
+    margin: 20px 0;
 
 }
 /* .carousel-control-prev-icon,
 .carousel-control-next-icon {
   background-color: black;
 } */
-.carousel-inner{
+.reviews .carousel-inner .carousel-content img {
+  width: 13%;
+}
+.reviews .carousel:hover .carousel-control-prev {
+  display: block;
+}
+.reviews .carousel:hover .carousel-control-next {
+  display: block;
+}
+.reviews .carousel-indicators .active {
+  background-color: #333;
+}
+.reviews .carousel-indicators li {
+  width: 10px;
+  border-radius: 50%;
+  height: 10px;
+  border: 2px solid #333;
+  /* background-color: #c5bed1; */
+  margin-bottom: 5px;
+}
+.reviews .carousel {
+  min-height: 370px;
+}
+.reviews .carousel .carousel-control-prev {
+  filter: invert(1);
+  left: 9%;
+  display: none;
+}
+.reviews .carousel .carousel-control-next {
+  filter: invert(1);
+  right: 9%;
+  display: none;
+}
+.carousel-in {
   width: 60%;
- margin: auto;
+  margin: auto;
 }
 .carousel-item h4{
   text-align: center;
@@ -691,6 +780,7 @@ text-align: center;
 
 .destination {
   text-align: center;
+  padding-top: 40px;
 }
 .destination h2 {
   font-family: "Satisfy", cursive;
@@ -856,6 +946,7 @@ text-align: center;
   background-color: rgba(0, 0, 0, 0.4);
   opacity: 0;
   transition: opacity .3s ease;
+  pointer-events: none;
 }
 
 .gallery_main .gallery .gall:hover::after {
@@ -871,7 +962,9 @@ text-align: center;
   transition: bottom .3s ease;
   opacity: 0;
   visibility: hidden;
+  pointer-events: none;
 }
+
 .gallery_main .gallery .gall:hover .gall_txt {
   bottom: 15px;
   opacity: 1;
@@ -906,7 +999,7 @@ text-align: center;
   margin-bottom: 10px;
 }
 .gallery_main .instagram a {
-  color: #c00b25;
+  color: rgb(227, 3, 46);
   text-transform: capitalize;
   transition: color .3s ease;
   font-size: 18px;
@@ -972,15 +1065,22 @@ gap: 40px;
   padding-bottom: 15px;
 }
 .main-footer ul li a{
-  color: black;
+  color: #54595F;
   font-size: 16px;
+  transition: color .45s ease-in-out;
+}
+.main-footer ul li a:hover span {
+  color: rgb(227, 3, 46);
+}
+.main-footer ul li a:hover i {
+  color: #54595F;
 }
 .main-footer ul li{
   padding-top: 3px;
 }
 .main-footer i{
-  color: #c00b25;
-  font-size: 14px;
+  color: rgb(227, 3, 46);
+  font-size: 16px;
 }
 .main-footer .offices .DU{
   margin-bottom: 22px;
