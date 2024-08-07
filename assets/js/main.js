@@ -63,23 +63,21 @@ document.addEventListener('DOMContentLoaded', () => {
   const servicesSection = document.querySelector('.services');
   const serElements = document.querySelectorAll('.services .ser');
   
-  let isMouseInside = false; // Flag to track if mouse is inside the section
+  let isMouseInside = false; 
   
   const updateTransform = () => {
       if (isMouseInside) {
           const rect = servicesSection.getBoundingClientRect();
           const windowHeight = window.innerHeight;
           
-          // Calculate the percentage of the section's visibility
           const percentageInView = Math.max(0, Math.min(1, (windowHeight - rect.top) / (windowHeight + rect.height)));
           
           serElements.forEach(ser => {
               const serImg = ser.querySelector('.ser_img');
               const serTxt = ser.querySelector('.ser_txt');
 
-              // Calculate the transform values based on scroll
-              const translateYImg = percentageInView * -30; // Interpolate between 0px and -30px
-              const translateYTxt = percentageInView * 20;  // Interpolate between 0px and 20px
+              const translateYImg = percentageInView * -30; 
+              const translateYTxt = percentageInView * 20; 
               
               serImg.style.transform = `translate3d(0px, ${translateYImg}px, 0px)`;
               serTxt.style.transform = `translate3d(0px, ${translateYTxt}px, 0px)`;
@@ -97,25 +95,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const handleMouseEnter = () => {
       isMouseInside = true;
-      // Removed the call to updateTransform() here to prevent transformation on mouse enter
   };
 
   const handleMouseLeave = () => {
       isMouseInside = false;
-      updateTransform(); // Ensure transform is reset when mouse leaves
+      updateTransform(); 
   };
   
-  // Add event listeners
   window.addEventListener('scroll', () => {
-      if (isMouseInside) { // Only update transform when the mouse is inside and the user scrolls
+      if (isMouseInside) { 
           updateTransform();
       }
   });
-  window.addEventListener('resize', updateTransform); // Optional: to handle window resizing
+  window.addEventListener('resize', updateTransform); 
   servicesSection.addEventListener('mouseenter', handleMouseEnter);
   servicesSection.addEventListener('mouseleave', handleMouseLeave);
 
-  updateTransform(); // Initial call
+  updateTransform(); 
 });
 
 
