@@ -17,6 +17,14 @@ function myFunction() {
 }
 });
 
+
+// mobile menu 
+function openNav() {
+    document.getElementById("mySidenav").style.width = '300px'
+  }
+  function closeNav() {
+    document.getElementById("mySidenav").style.width = '0'
+  }
 //current page color
 
 const currentPage = window.location.pathname;
