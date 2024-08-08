@@ -96,7 +96,14 @@ background: #c00b25;
 }
 
 /* ***************************************************************** */
-
+.header .header-content .sidenav .menuu li i{
+  border: 1px solid black;
+  padding: 0px 15px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 11px; 
+   font-weight: 900;
+}
 .sidenav {
   
   height: 100%;
@@ -137,9 +144,24 @@ background: #c00b25;
 
 
 
+.overlay {
+  position: fixed;
+  opacity: 0;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  transition: opacity 0.5s ease; /* Smooth transition for opacity */
+  pointer-events: none; /* Prevent interactions when invisible */
+}
 
 
-
+/* Overlay visible state */
+.overlay.visible {
+  opacity: 1;
+}
 
 
 .sidenav .menuu li {
@@ -1220,7 +1242,7 @@ color: rgb(227, 3, 46);
     height: 45px;
   }
   .header-left {
-    width: 50%;
+    width: 33%;
   }
 }
 @media (max-width: 575.98px) { 
@@ -1244,6 +1266,9 @@ color: rgb(227, 3, 46);
   }
   .carousel-indicators {
     bottom: -40px;
+  }
+  .header-left {
+    width: 50%;
   }
 }
 
