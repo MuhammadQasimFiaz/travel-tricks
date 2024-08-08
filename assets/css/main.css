@@ -1210,6 +1210,18 @@ color: rgb(227, 3, 46);
   .we_offers .offers .offer {
     flex: 1 1 calc(100%);
   }
+  .Top-bar .Top-first .Top-first-left{
+    display: none;
+  }
+  .Top-bar .Top-first .Top-first-right{
+    margin: auto;
+  }
+  .Top-bar .Top-first {
+    height: 45px;
+  }
+  .header-left {
+    width: 50%;
+  }
 }
 @media (max-width: 575.98px) { 
   .destination h3 {
@@ -1234,24 +1246,6 @@ color: rgb(227, 3, 46);
     bottom: -40px;
   }
 }
-<<<<<<< HEAD
-@media (max-width: 767.98px) { 
-  .Top-bar .Top-first .Top-first-left{
-    display: none;
-  }
-  .Top-bar .Top-first .Top-first-right{
-    margin: auto;
-  }
-  .Top-bar .Top-first {
-    height: 45px;
-}
-.header-left {
-  width: 50%;
-}
-}
-@media (max-width: 575.98px) { }
-=======
->>>>>>> b6a80b06f3397a4c348499e2ef7894b928a08326
 
 
 
