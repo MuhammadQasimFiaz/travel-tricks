@@ -1326,8 +1326,43 @@ color: rgb(227, 3, 46);
   .header-left {
     width: 33%;
   }
+  .carousel-caption {
+    width: 75%;
+  }
+  .my-carousel .carousel-item .carousel-caption h5 {
+    font-size: 35px;
+  }
 }
 @media (max-width: 575.98px) { 
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(100%);
+    }
+    to {
+      opacity: 1;
+      top: 40%;
+      transform: translateY(-40%);
+    }
+  }
+  .my-carousel .carousel-item .carousel-caption h4 {
+    font-size: 14px;
+  }
+  .my-carousel .carousel-item .carousel-caption h5 {
+    font-size: 20px;
+    margin: 10px 0;
+  }
+  .my-carousel .carousel-item .carousel-caption a {
+    font-size: 14px;
+    padding: 5px 15px;
+  }
+  /* .carousel-caption {
+    bottom: 50%;
+    transform: translateY(-50%);
+  } */
+  .carousel-caption {
+    width: 65%;
+  }
   .destination h3 {
     font-size: 40px;
   }
