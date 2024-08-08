@@ -104,6 +104,48 @@ background: #c00b25;
   font-size: 11px; 
    font-weight: 900;
 }
+.dropdownn .my_drop{
+    position: static;
+    background: transparent;
+    border: none;
+}
+.dropdownn .my_drop li {
+  /* background: #000; */
+  /* color: #fff; */
+  margin-bottom: 0px;
+  text-transform: uppercase;
+  padding: 0px 10px 0px 10px;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: 0.45s;
+  margin: 0 !important;
+}
+.dropdownn .my_drop li a {
+  width: 100%; color: #000;
+  padding: 5px 8px 5px 0;
+}
+
+.my_drop li.list-group-item a:hover {
+  color: #fff;
+}
+
+.list-group-item{
+  border: none;
+}
+.dropdownn-menu {
+  display: none;
+}
+
+.toggle, .dropdown-menu {
+  width: 100%;
+}
+
+.is-active .dropdown-menu {
+  display: block;
+}
+
+
 .sidenav {
   
   height: 100%;
