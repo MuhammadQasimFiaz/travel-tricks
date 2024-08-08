@@ -18,13 +18,33 @@ function myFunction() {
 });
 
 
-// mobile menu 
+// mobile menu
+// function openNav() {
+//     document.getElementById("mySidenav").style.width = '300px'
+//   }
+//   function closeNav() {
+//     document.getElementById("mySidenav").style.width = '0'
+//   }
 function openNav() {
-    document.getElementById("mySidenav").style.width = '300px'
-  }
-  function closeNav() {
-    document.getElementById("mySidenav").style.width = '0'
-  }
+    const overlay = document.getElementById("overlay");
+    overlay.classList.add("visible");
+
+    setTimeout(() => {
+        document.getElementById("mySidenav").style.width = "300px";
+    }, 100); // Slight delay to ensure overlay appears first
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+
+    setTimeout(() => {
+        const overlay = document.getElementById("overlay");
+        overlay.classList.remove("visible");
+    }, 300); // Delay to ensure menu closes before overlay disappears
+}
+
+
+
 //current page color
 
 const currentPage = window.location.pathname;
