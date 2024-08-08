@@ -43,6 +43,11 @@ function closeNav() {
     }, 300); // Delay to ensure menu closes before overlay disappears
 }
 
+$('.toggle').click(function(e) {
+    $(this).next('.dropdown-menu ').slideToggle(500);
+    $(this).parent('li').siblings().children('.dropdown-menu').slideUp(500);
+ 
+ });
 
 
 //current page color
