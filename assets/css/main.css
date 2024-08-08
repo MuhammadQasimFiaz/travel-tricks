@@ -404,7 +404,6 @@ color: rgb(227, 3, 46);
   padding: 0px 35px;
   display: flex;
   align-items: center;
-  padding-bottom: 50px;
 }
 .blog .news-media .news-content{
   background-color: white;
@@ -500,11 +499,11 @@ color: rgb(227, 3, 46);
   top: 3%;
   left: 3%;
   width: 50px;
-  padding: 5px 0;
-  z-index: 2;
+  
 }
 .blog .news-media .blog-img .news-date h4{
-  text-align: center;
+  padding: 6px 6px 0px 6px;
+text-align: center;
   font-size: 24px;
   font-weight: 400;
 }
@@ -512,7 +511,7 @@ color: rgb(227, 3, 46);
   font-weight: 600;
   font-size: 12px;
   color: black;
-  padding: 0;
+  margin-top: -20px;
 }
 
 
@@ -520,24 +519,140 @@ color: rgb(227, 3, 46);
 
 
 
-.news-media {
+.blog .travel{
+  display: flex;
+  align-items: center;
+  padding: 35px;
+}
+.RR{
+  flex-direction: row-reverse;
+}
+.blog .travel .travel-content{
+  background-color: white;
+    height: fit-content;
+    padding: 22px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    margin-right: -15px;
+    z-index: 1;
+}
+.blog .travel .travel-content .travel-btn1 {
+  text-align: center;
+  background-color: #e3032e;
+  padding: 2px 8px;
+  width: fit-content;
+  margin: auto;
+  margin-top: -35px;
+}
+.blog .travel .travel-content .travel-btn1 a{
+  color: white;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.blog .travel .travel-content .travel-btn1 a:hover {
+  color: #f7b7c3;
+}
+.blog .travel .travel-content h3{
+  
+    margin-top: -18px;
+
+}
+.blog .travel .travel-content h3 a{
+  color: rgb(227, 3, 46);
+    font-weight: 400;
+    font-size: 23px;
+}
+.blog .travel .travel-content h3 a:hover{
+  color: #780D10;
+}
+
+.blog .travel .travel-content h3::after {
+  content: none ;
+}
+.blog .travel .travel-content .icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: -30px 0px;
+}
+.blog .travel .travel-content .icons i:hover, a:hover{
+  color: #777777;
+}
+.blog .travel .travel-content .travel-btn2{
+ 
+    text-align: center;
+    margin-top: -10px;
+
+}
+.blog .travel .travel-content .travel-btn2 a {
+  color: #e93d5e;
+  font-weight: 800;
+  font-size: 13px;
+  text-transform: uppercase;
+  position: relative;
+  display: inline-block; 
+}
+
+.blog .travel .travel-content .travel-btn2 a::after{
+  content: '';
+  position: absolute;
+  right: -15%;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+.blog .travel .travel-content .travel-btn2 a:hover::after{
+  content: '. . .';
+  opacity: 1;
+}
+.travel .travel-img{
+  position: relative;
+}
+.blog .travel .travel-date{
+  background-color: white;
+  position: absolute;
+  top: 3%;
+  right: 3%;
+  width: 50px;
+  
+}
+.blog .travel .travel-date h4{
+  padding: 6px 6px 0px 6px;
+text-align: center;
+  font-size: 24px;
+  font-weight: 400;
+}
+.blog .travel .travel-date p{
+  font-weight: 600;
+  font-size: 12px;
+  color: black;
+  margin-top: -20px;
+}
+
+
+
+
+
+.news-media, .travel {
   position: relative;
   overflow: hidden; 
 }
 
-.blog-img {
+.blog-img, .travel-img {
   position: relative;
   overflow: hidden; 
 }
 
-.blog-img img{
+.blog-img img , .travel-img img{
   width: 100%; 
   height: auto;
   transition: transform 0.3s ease; 
   display: block;
 }
 
-.blog-img::before{
+.blog-img::before, .travel-img::before{
   content: '';
   position: absolute;
   top: 0;
@@ -548,10 +663,9 @@ color: rgb(227, 3, 46);
   opacity: 0;
   transition: opacity 0.3s ease;
   z-index: 1; 
-  pointer-events: none;
 }
 
-.blog-img::after {
+.blog-img::after, .travel-img::after {
   content: '\2022  \2022  \2022';
   position: absolute;
   top: 50%;
@@ -564,15 +678,15 @@ color: rgb(227, 3, 46);
   z-index: 2; 
 }
 
-.news-media:hover .blog-img img {
+.news-media:hover .blog-img img, .travel:hover .travel-img img {
   transform: scale(1.1); 
 }
 
-.news-media:hover .blog-img::before{
+.news-media:hover .blog-img::before, .travel:hover .travel-img::before{
   opacity: 1;
 }
 
-.news-media:hover .blog-img::after {
+.news-media:hover .blog-img::after, .travel:hover .travel-img::after {
   opacity: 1; 
 }
 
@@ -593,7 +707,7 @@ color: rgb(227, 3, 46);
   font-size: 2em;
 }
 
-.news-media:hover .img-overlay {
+.news-media:hover .img-overlay, .travel:hover .img-overlay {
   opacity: 1;
 }
 
@@ -601,12 +715,10 @@ color: rgb(227, 3, 46);
   display: none;
 }
 
-.news-media:hover .dots {
+.news-media:hover .dots, .travel:hover .dots {
   display: block;
 }
-.m-right {
-  margin-right: -15px;
-}
+
 
 /* ************************************************************************** */
 
@@ -656,9 +768,12 @@ color: rgb(227, 3, 46);
 /* ************************************************************************ */
 
 .reviews{
+  /* background-image: url("assets/images/travel-testimonials-bg.jpg"); */
   background-position: center top;
+  /* background-color: black; */
   background-repeat: no-repeat;
   background-size: cover;
+  /* min-height: 540px; */
   padding-bottom: 45px;
 }
 .reviews h3{
@@ -1012,7 +1127,8 @@ color: rgb(227, 3, 46);
 } 
 .main-footer .container{
   display: flex;
-  gap: 40px;
+gap: 40px;
+
   flex-direction: row;
  }
 .main-footer .payment{
@@ -1132,109 +1248,7 @@ color: rgb(227, 3, 46);
   .destination p {
     font-size: 14px;
   }
-  .destination .destination_images {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .services .ser {
-    flex-direction: column !important;
-  }
-  .services .ser .ser_img, .services .ser .ser_txt {
-    width: 100%;
-  }
-  .we_offers .offers {
-    flex-wrap: wrap;
-  }
-  .we_offers .offers .offer {
-    flex: 1 1 calc(49% - 10px);
-  }
-  .blog .news-media {
-    padding: 0;
-    padding-bottom: 50px;
-    flex-direction: column !important;
-  }
-  .carousel-in {
-    width: 100%;
-  }
-  .carousel-control-next, .carousel-control-prev {
-    width: auto;
-  }
-  .reviews .carousel .carousel-control-next {
-    right: -30px;
-  }
-  .reviews .carousel .carousel-control-prev {
-    left: -30px;
-  }
-  .gallery_main .gallery {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-  }
-  .gallery_main .gallery .gall a img {
-    width: auto;
-  }
 }
-@media (max-width: 767.98px) { 
-  .destination p {
-    font-size: 16px;
-  }
-  .destination .destination_images {
-    grid-template-columns: repeat(1, 1fr);
-  }
-  .destination .destination_images .dest_img {
-    width: fit-content;
-    margin: 0 auto;
-  }
-  .services .ser .ser_txt h2 {
-    font-size: 28px;
-  }
-  .services .ser .ser_txt a {
-    line-height: 32px;
-  }
-  .reviews .carousel .carousel-control-prev, .reviews .carousel .carousel-control-next {
-    display: block;
-  }
-  .gallery_main .gallery {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .main-footer {
-    padding: 40px 0px;
-  }
-  .main-footer .container {
-    flex-direction: column;
-  }
-  .main-footer .payment {
-    width: 100%;
-  }
-  .main-footer .offices {
-    margin-left: 0;
-  }
-  .we_offers .offers .offer {
-    flex: 1 1 calc(100%);
-  }
-}
-@media (max-width: 575.98px) { 
-  .destination h3 {
-    font-size: 40px;
-  }
-  .destination h3 {
-    margin: 10px 0 20px 0;
-  }
-  .destination h3::after {
-    top: 110%;
-  }
-  .destination p {
-    font-size: 17px;
-  }
-  .we_offers h3 {
-    font-size: 28px;
-  }
-  .reviews .carousel .carousel-control-prev, .reviews .carousel .carousel-control-next {
-    display: none;
-  }
-  .carousel-indicators {
-    bottom: -40px;
-  }
-}
-<<<<<<< HEAD
 @media (max-width: 767.98px) { 
   .Top-bar .Top-first .Top-first-left{
     display: none;
@@ -1250,8 +1264,6 @@ color: rgb(227, 3, 46);
 }
 }
 @media (max-width: 575.98px) { }
-=======
->>>>>>> b6a80b06f3397a4c348499e2ef7894b928a08326
 
 
 
