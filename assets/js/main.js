@@ -31,7 +31,7 @@ function openNav() {
 
     setTimeout(() => {
         document.getElementById("mySidenav").style.width = "300px";
-    }, 100); // Slight delay to ensure overlay appears first
+    }, 100); 
 }
 
 function closeNav() {
@@ -40,7 +40,7 @@ function closeNav() {
     setTimeout(() => {
         const overlay = document.getElementById("overlay");
         overlay.classList.remove("visible");
-    }, 300); // Delay to ensure menu closes before overlay disappears
+    }, 300); 
 }
 
 $('.toggle').click(function(e) {
