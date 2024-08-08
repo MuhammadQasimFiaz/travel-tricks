@@ -123,3 +123,21 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+function adjustContainerClasses() {
+    const containers = document.querySelectorAll('.custom-container');
+    if (window.innerWidth < 991.98) {
+        containers.forEach(container => {
+            container.classList.remove('container');
+            container.classList.add('container-fluid');
+        });
+    } else {
+        containers.forEach(container => {
+            container.classList.remove('container-fluid');
+            container.classList.add('container');
+        });
+    }
+}
+
+adjustContainerClasses();
+
+window.addEventListener('resize', adjustContainerClasses);
