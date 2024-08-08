@@ -2,19 +2,33 @@
 document.addEventListener('DOMContentLoaded', () => {
     window.onscroll = function () { myFunction() };
 
-const dropdown = document.querySelector(".dropdown")
-var header = document.getElementById("myHeader");
-var sticky = header.offsetTop;
+    const dropdown = document.querySelector(".dropdown")
+    var header = document.getElementById("myHeader");
+    var sticky = header.offsetTop;
+    
+    // Get the button
+    let goToTopBtn = document.getElementById("goToTopBtn");
 
-function myFunction() {
-  if (window.scrollY > sticky) {
-      header.classList.add("sticky");
-      dropdown.style.top = '15%'
-  } else {
-      header.classList.remove("sticky");
-      dropdown.style.top = '22%'
-  }
-}
+    // When the user clicks on the button, scroll to the top of the document
+    goToTopBtn.addEventListener('click', function() {
+        window.scrollTo({top: 0, behavior: 'smooth'});  
+    });
+
+    function myFunction() {
+      if (window.scrollY > sticky) {
+          header.classList.add("sticky");
+          dropdown.style.top = '15%'
+      } else {
+          header.classList.remove("sticky");
+          dropdown.style.top = '22%'
+      }
+
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            goToTopBtn.style.display = "block";
+        } else {
+            goToTopBtn.style.display = "none";
+        }
+    }
 });
 
 
@@ -166,23 +180,4 @@ function adjustContainerClasses() {
 adjustContainerClasses();
 
 window.addEventListener('resize', adjustContainerClasses);
-
-document.addEventListener('DOMContentLoaded', () => {
-// Get the button
-let goToTopBtn = document.getElementById("goToTopBtn");
-
-// Show the button when the user scrolls down 20px from the top of the document
-window.onscroll = function() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        goToTopBtn.style.display = "block";
-    } else {
-        goToTopBtn.style.display = "none";
-    }
-};
-
-// When the user clicks on the button, scroll to the top of the document
-goToTopBtn.addEventListener('click', function() {
-    window.scrollTo({top: 0, behavior: 'smooth'});
-});
-})
 
