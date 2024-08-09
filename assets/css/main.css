@@ -1354,6 +1354,9 @@ color: rgb(227, 3, 46);
   }
 }
 @media (max-width: 575.98px) { 
+  .my-carousel .carousel-item img {
+    height: 300px;
+  }
   @keyframes slideUp {
     from {
       opacity: 0;
