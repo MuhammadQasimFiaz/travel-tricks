@@ -1357,6 +1357,7 @@ color: rgb(227, 3, 46);
   .my-carousel .carousel-item img {
     height: 300px;
   }
+
   @keyframes slideUp {
     from {
       opacity: 0;
@@ -1408,7 +1409,11 @@ color: rgb(227, 3, 46);
     bottom: -40px;
   }
   .header-left {
-    width: 50%;
+    width: 40%;
+  }
+  .header-content{
+    padding: 0;
+    height: 70px;
   }
 }
 
