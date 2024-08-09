@@ -1188,7 +1188,41 @@ color: rgb(227, 3, 46);
 #goToTopBtn i {
   color: rgb(227, 3, 46);
 }
+.contact_us{
+  position: fixed;
+  z-index: 99;
+  right: 0;
+  top: 50%;
+}
+.contact_us .minimize{
+  background-color: black;
+  width: 40px;
+  padding: 10px;
+}
+.contact_us .contact_page{
+  background-color: #dd3333;
+  
 
+}
+.contact_us .contact_page span{
+  color: white;
+  writing-mode: vertical-rl;
+  transform: rotate(-180deg)
+}
+/* .contact_us .contact_page i {
+  transform: rotate(-180deg);
+} */
+
+.contact_us .wtsp{
+  background-color: #26d367;
+  width: 40px;
+  padding: 10px;
+}
+.contact_us .email{
+  background-color: #54595f;
+  width: 40px;
+  padding: 10px;
+}
 /* **************************************************************************** */
 
 
