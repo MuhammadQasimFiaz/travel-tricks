@@ -1196,11 +1196,16 @@ color: rgb(227, 3, 46);
   transform: translateY(-50%);
   border-radius: 10px 0 0 10px;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  width: 50px;
+  /* align-items: center; */
+  justify-content: center;
 }
 
 .contact_us li {
   cursor: pointer;
-  padding: 10px;
+  padding: 10px 0;
 }
 
 .contact_us .minimize {
@@ -1226,6 +1231,7 @@ color: rgb(227, 3, 46);
   align-items: center;
   justify-content: center;
   text-align: center;
+  font-size: 12px;
 }
 
 .contact_us .contact_page i {
@@ -1245,8 +1251,20 @@ color: rgb(227, 3, 46);
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
+.contact_us .email .env {
+  position: absolute;
+  left: auto;
+  right: 100%;
+  top: 0;
+  height: 100%;
+  background: #000;
+  width: 200px;
+  color: #fff;
+  border-radius: 10px 0 0 10px;
+}
 .contact_us i {
   font-size: 16px;
 }
